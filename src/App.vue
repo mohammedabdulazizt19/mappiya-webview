@@ -1,16 +1,28 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item"><router-link class="nav-link active" :to="{name: 'home'}">Home</router-link></li>
-        <li class="nav-item"><router-link class="nav-link" :to="{name: 'about'}">About</router-link></li>
-      </ul>
-    </div>
-  </nav>
-<router-view />
+  <div>
+      <header>
+        <NavBar />
+        <HeroSection />
+      </header>
+  
+  
+      <main>
+        <router-view />
+      </main>
+
+      <div>
+        <ContactInfo />
+        <FooterSection />
+      </div>
+
+  </div>
 </template>
 
 <script setup>
-import {RouterView, RouterLink} from 'vue-router'
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue';
+import HeroSection from './components/HeroSection.vue';
+import ContactInfo from './components/ContactInfo.vue';
+import FooterSection from './components/FooterSection.vue';
 
 </script>
