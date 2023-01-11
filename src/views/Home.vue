@@ -1,8 +1,21 @@
 <template>
-    <h1>Home</h1>
-    <CounterButton />
+    <GuestLayout>
+    <div></div>  
+    </GuestLayout>
 </template>
 
-<script setup>
-import CounterButton from '../components/CounterButton.vue'
+<script>
+import GuestLayout from './layouts/GuestLayout.vue';
+
+export default{
+    components: {
+        GuestLayout
+    }
+}
 </script>
+ 
+<style>
+/* .home-container{
+    height: 50vh;
+} */
+</style>
