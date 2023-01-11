@@ -1,8 +1,19 @@
 <template>
-    <h1>Home</h1>
-    <CounterButton />
+    <div>
+        <!-- <div class="container home-container">
+            <div class="row">
+                <h3>Home Page</h3>
+            </div> 
+        </div> -->
+    </div>  
 </template>
 
 <script setup>
-import CounterButton from '../components/CounterButton.vue'
+
 </script>
+ 
+<style>
+/* .home-container{
+    height: 50vh;
+} */
+</style>
