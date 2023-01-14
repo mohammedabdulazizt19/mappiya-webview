@@ -22,7 +22,7 @@
                     </div>
                     <div class="px-5 row mb-4">
                         <div class="col-md-5">
-                            <button class=" btn btn-outline-primary btn-sm" type="button" :disabled="!email && !password" v-on:click="logIn">Log in</button>
+                            <button class=" btn btn-outline-primary btn-sm" type="button" :disabled="!email && !password" v-on:click="redirectMe">Log in</button> <!--logIn-->
                         </div>
                         <div class="col-md-7 text-end">
                             <label><a href="#">forget password</a></label>
@@ -48,23 +48,27 @@ export default {
     components: {
         LayoutLogIn
     },
-    data: () => ({
-        email: "",
-        password: "",
-    }),
+    data() {
+        return {
+            email: "",
+            password: "",
+        }
+    },
     methods: {
+        redirectMe() {
+            this.$router.push('/adminHome');
+        },
         logIn() {
                 axios.post('http://app.mappiya.com/api/sanctum/token', {
                 email: this.email,
                 password: this.password,
                 device_name: 'Web_view',
-                JSON:true
+                this:$router.push('/adminHome')
             })
             .then(function (response) {
                 //console.log(response.data);
                 alert(response.data);
-                //this.$router
-                    //.push({ path: '/adminHome'})
+                this.$router.push( '/adminHome');
                     //.then(data => {
                     //    this.$router.replace({ name: "Admin"});
                     //})

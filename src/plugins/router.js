@@ -35,7 +35,7 @@ const routes = [
     name: "Admin",
     component: AdminHome,
     meta: {
-      needsAuth: true
+      needsAuth: false
     }
   }
 
