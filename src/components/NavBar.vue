@@ -19,7 +19,7 @@
                         </li>
                     </ul>
                     <div class="d-flex ms-auto">
-                        <router-link class="btn btn-primary" :to="{name: 'LogIn'}">Log in</router-link>
+                        <router-link class="btn btn-outline-primary btn-sm" :to="{name: 'LogIn'}">Log In</router-link>
                     </div>
                 </div>
             </div>

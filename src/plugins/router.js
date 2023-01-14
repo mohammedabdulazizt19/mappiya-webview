@@ -3,7 +3,8 @@ import Home from "../views/Home.vue";
 import Menu from "../views/Menu.vue";
 import ListGroupEmail from "../views/ListGroupEmail.vue";
 import LogIn from "../views/LogIn.vue";
-import SignUp from "../views/SignUp.vue";
+import AdminHome from "../views/AdminHome.vue";
+
 const routes = [
   {
     path: "/",
@@ -30,15 +31,27 @@ const routes = [
   },
 
   {
-    path: "/Signup",
-    name: "Signup",
-    component: SignUp,
-  },
+    path: "/adminHome",
+    name: "Admin",
+    component: AdminHome,
+    meta: {
+      needsAuth: true
+    }
+  }
+
 ];
 
 const router = createRouter({
   routes,
   history: createWebHistory(),
 });
+
+router.beforeEach((to, from, next) => {
+  if(to.meta.needsAuth) {
+    next('/login');
+  } else {
+    next();
+  }
+})
 
 export default router;
