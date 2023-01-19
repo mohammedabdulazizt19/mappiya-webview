@@ -8,7 +8,6 @@ const routes = [
     name: "home",
     component: Home,
   },
-
   {
     path: "/menu",
     name: "menu",

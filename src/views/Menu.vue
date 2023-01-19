@@ -1,46 +1,6 @@
 <template>
     <div>
-        <div class="">
-            <a class="btn cart-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                <i class="fa-solid fa-cart-shopping fa-sm position-relative"></i>
-                <span style="top: 15%;" class="fs-6 position-absolute start-100 translate-middle badge rounded-pill text-bg-danger">
-                    15+
-                </span>
-            </a>
-        </div>
-
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Your cart</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div>
-                Start adding items to your cart
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-6">
-                    <p>Subtotal</p>
-                </div>
-                <div class="col-6">
-                    <p>₱ 0</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-6">
-                    <h6>Total (Incl. VAT)</h6>
-                </div>
-                <div class="col-6">
-                    <p>₱ 0</p>
-                </div>
-            </div>
-            <div class="row">
-                <button class="btn btn-secondary d-block w-100">Go to checkout</button>
-            </div>
-        </div>
-        </div>
+        <Cart />
         <div class="container menu-container">
             <div class="container">
                 <div class="row p-4 title-row">
@@ -50,32 +10,39 @@
                             <i style="color: #FFF019;" class="fa-solid fa-star"></i>
                             <p class="mt-3 mx-2">4.4/5 <span class="text-secondary">(100+)</span></p>
                         </div>
-                    
-                        <ul class="d-flex justify-content-between text-secondary">
-                            <li>Japanese</li>
-                            <li>Asian</li>
-                            <li>Noodles</li>
-                            <li>Rice Dishes</li>
-                            <li>Southeast Asian</li>
-                        </ul>
+                        
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <ul class="resto-tag d-flex justify-content-between text-secondary">
+                                    <li>Japanese</li>
+                                    <li>Asian</li>
+                                    <li>Noodles</li>
+                                    <li>Rice Dishes</li>
+                                    <li>Southeast Asian</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>   
                 </div> 
             </div>
-            <MenuCategory />
-            <MenuTakoyaki />
-            <MenuRamen />
-            <MenuRiceBowl />
+
+
+            <AllMenu />
         </div>
     </div>  
 </template>
 
 
-<script setup>
-import MenuCategory from '../components/Menu/MenuCategory.vue';
-import MenuRamen from '../components/Menu/MenuRamen.vue';
-import MenuTakoyaki from '../components/Menu/MenuTakoyaki.vue';
-import MenuRiceBowl from '../components/Menu/MenuRiceBowl.vue';
-
+<script>
+import Cart from '../components/Menu/Cart.vue'
+import AllMenu from '../components/Menu/AllMenu.vue';
+export default {
+    name: "Menu",
+    components: {
+        Cart,
+        AllMenu
+    },
+}
 
 </script>
  
@@ -99,18 +66,12 @@ import MenuRiceBowl from '../components/Menu/MenuRiceBowl.vue';
 .menu-image-wrapper{
     position: relative;
 }
-.menu-img{
+.menu-image-wrapper img{
     width: 100%;
     height: 100px;
     object-fit: cover;
 }
-.plus-icon{
-    color: red;
-    position: absolute;
-    top: 77%;
-    left: 76%;
-    cursor: pointer;
-}
+
 
 
 </style>

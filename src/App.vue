@@ -1,28 +1,56 @@
 <template>
   <div>
       <header>
-        <NavBar />
-        <HeroSection />
+        <NavBar class="navbar-sticky" />
+        <HeroSection class="hero-sec" />
       </header>
   
-  
-      <main>
-        <router-view />
-      </main>
-
-      <div>
-        <ContactInfo />
-        <FooterSection />
+      <div class="main-container" style="min-height: 100%;">
+        <main>
+          <router-view />
+        </main>
+        <div>
+          <ContactInfo />
+          <FooterSection />
+        </div>
       </div>
-
   </div>
 </template>
 
-<script setup>
+<script >
 import { RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue';
 import HeroSection from './components/HeroSection.vue';
 import ContactInfo from './components/ContactInfo.vue';
 import FooterSection from './components/FooterSection.vue';
 
+export default {
+  name: "App",
+  components: {
+    NavBar,
+    HeroSection,
+    ContactInfo,
+    FooterSection
+  },
+}
+
 </script>
+
+<style>
+.navbar-sticky{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: #D0A772;
+}
+.hero-sec{
+  padding-top: 100px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+</style>

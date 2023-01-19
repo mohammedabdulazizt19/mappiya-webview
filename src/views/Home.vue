@@ -13,7 +13,5 @@
 </script>
  
 <style>
-/* .home-container{
-    height: 50vh;
-} */
+
 </style>

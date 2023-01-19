@@ -1,0 +1,164 @@
+{
+    "menus" : [
+        {
+            "title": "Cheesy Takoyaki",
+            "id": "1",
+            "description": "Solo 6pcs 272cal",
+            "price": "20",
+            "image": "https://bxtraoutlet.delivery/wp-content/uploads/2021/10/Cheesy-Takoyaki.png",
+            "quantity": "1"
+        },
+        {
+            "title": "Classic Takoyaki",
+            "id": "2",
+            "description": "Solo 6pcs 260cal",
+            "price": "18",
+            "image": "https://www.wandercooks.com/wp-content/uploads/2019/09/takoyaki-recipe-ft-500x375.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Tako-trio",
+            "id": "3",
+            "description": "800cal / 12pcs",
+            "price": "40",
+            "image": "https://gurunavi.com/en/japanfoodie/assets_c/2017/06/takoyaki_01-thumb-320x213-55789.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Gyuniku Ramen",
+            "id": "4",
+            "description": "Beef flavor ramen 550cal",
+            "price": "48",
+            "image": "https://img.taste.com.au/_8hW157z/w720-h480-cfill-q80/taste/2017/08/ramen-129052-2.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Niwator Ramen",
+            "id": "5",
+            "description": "Chicken flavor ramen 500cal",
+            "price": "48",
+            "image": "https://i.pinimg.com/originals/b4/5f/0c/b45f0cd99853191872124f2f5191b2a6.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Gyudon",
+            "id": "6",
+            "description": "Beef flavor free Miso Soup 489cal",
+            "price": "29",
+            "image": "https://www.pressurecookrecipes.com/wp-content/uploads/2021/10/gyudon.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Teriyaki",
+            "id": "7",
+            "description": "Chicken flavor free Miso Soup 439cal",
+            "price": "25",
+            "image": "https://www.saltandlavender.com/wp-content/uploads/2018/11/teriyaki-chicken-recipe-1.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Tori Katsudon",
+            "id": "8",
+            "description": "Chicken flavor free Miso Soup 464cal",
+            "price": "25",
+            "image": "https://www.thespruceeats.com/thmb/9xIb4zUFvMmxgCx9-0Pam1bsAAc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/katsudon-2031259-hero-01-eaeaad239007461ab5fdb909bcf52c76.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Japanese Siomai with Rice",
+            "id": "9",
+            "description": "Chicken flavor free Miso Soup 390cal",
+            "price": "48",
+            "image": "https://thumbs.dreamstime.com/b/freshly-cooked-japanese-food-called-siomai-rice-photo-249577655.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Food Bundle",
+            "id": "10",
+            "description": "8pcs cali maki, 8pcs crunchy call aburi, 8pcs new style, 8pcs cheesy takoyaki, 8pcs classic takoyaki",
+            "price": "145",
+            "image": "https://images.deliveryhero.io/image/fd-ph/LH/r8uc-hero.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Crunchy California Aburi 8pcs",
+            "id": "11",
+            "description": "8pcs sushi california aburi flavor",
+            "price": "35",
+            "image": "https://cdn.saffire.com/images.ashx?t=ig&rid=VisitBuenaPark&i=aburi_payce_tiger_roll.jpg",
+            "quantity": "1"
+        }, 
+        {
+            "title": "Classic California Maki 8pcs",
+            "id": "12",
+            "description": "8pcs sushi california maki flavor",
+            "price": "35",
+            "image": "https://panlasangpinoy.com/wp-content/uploads/2009/11/CaliRollFront.jpg",
+            "quantity": "1"
+        }, 
+        {
+            "title": "New Style California Aburi 8pcs",
+            "id": "13",
+            "description": "8pcs sushi new style aburi flavor",
+            "price": "35",
+            "image": "https://www.misstamchiak.com/wp-content/uploads/2017/05/Senmi_Sushi_Closeup-e1495678374566.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Leche Flan",
+            "id": "14",
+            "description": "Sweetest leche flan for dessert (340 cal)",
+            "price": "15",
+            "image": "https://amiablefoods.com/wp-content/uploads/leche-flan-recipe-card.jpg",
+            "quantity": "1"
+        }, 
+        {
+            "title": "Empanada",
+            "id": "15",
+            "description": "3pcs empanada (190 cal)",
+            "price": "12",
+            "image": "https://handletheheat.com/wp-content/uploads/2015/06/beef-empanadas-SQUARE.jpg",
+            "quantity": "1"
+        }, 
+        {
+            "title": "Japsiomai Solo",
+            "id": "16",
+            "description": "8pcs siomai (70 cal)",
+            "price": "20",
+            "image": "http://images.summitmedia-digital.com/yummyph/images/2008_updated_recipes/08-2008_yummy.ph_recipe_image_siomai_main.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Chili Garlic Sauce",
+            "id": "17",
+            "description": "Best chili garlic sauce (120 cal)",
+            "price": "13",
+            "image": "https://pickledplum.com/wp-content/uploads/2019/04/chili-garlic-sauce-1OPTM.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Takoyaki Sauce",
+            "id": "18",
+            "description": "extra takoyaki sauce",
+            "price": "3",
+            "image": "https://www.wandercooks.com/wp-content/uploads/2019/10/takoyaki-sauce-2.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Cheese Sauce",
+            "id": "19",
+            "description": "extra creamy cheese sauce",
+            "price": "3",
+            "image": "https://assets.epicurious.com/photos/57c5bf23082060f11022b575/master/pass/cheese-sauce.jpg",
+            "quantity": "1"
+        },
+        {
+            "title": "Mayonaise",
+            "id": "20",
+            "description": "extra mayonaise",
+            "price": "3",
+            "image": "https://thumbs.dreamstime.com/b/home-made-mayonaise-25518521.jpg",
+            "quantity": "1"
+        }
+    ]
+}

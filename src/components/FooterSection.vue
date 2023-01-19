@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer class="footer-area bg-f">
+        <footer class="footer-area bg-f" style="position: relative;">
             <div class="container">
                 <div class="row">
                 <div class="col-lg-3 col-md-6">
