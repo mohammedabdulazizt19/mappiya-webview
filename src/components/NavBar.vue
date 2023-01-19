@@ -2,7 +2,7 @@
     <div>
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <router-link class="nav-link" :to="{name: 'home'}"><img class="logo-eben" src="../assets/logo-ebenezar.png" alt="" /></router-link> 
+                <router-link class="nav-link" :to="{name: 'home'}"><img class="logo-eben" src="../assets/logo-ebenezar_update.png" alt="" /></router-link> 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -14,12 +14,9 @@
                         <li class="nav-item">
                             <router-link class="nav-link text-dark" :to="{name: 'menu'}">Menu</router-link>
                         </li>  
-                        <li class="nav-item">
-                            <router-link class="nav-link text-dark" :to="{name: 'email'}">Email</router-link>
-                        </li>
                     </ul>
                     <div class="d-flex ms-auto">
-                        <router-link class="btn btn-outline-primary btn-sm" :to="{name: 'LogIn'}">Log In</router-link>
+                        <router-link class="btn btn-warning btn-sm" :to="{name: 'LogIn'}">Log In</router-link>
                     </div>
                 </div>
             </div>
@@ -35,6 +32,6 @@ import { RouterLink} from 'vue-router'
 <style>
 .logo-eben{
     width: 100%;
-    height: 100px;
+    height: 40px;
 }
 </style>

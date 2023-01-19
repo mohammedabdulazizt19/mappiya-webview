@@ -1,44 +1,42 @@
 <template>
     <LayoutLogIn>
-    <div class="container">
-        <div class="col-md-4 mx-auto pt-5">
-            <div class="card m-5">
-            <div class="card-header">
-                <h4 class="mb-2 text-center mt-3">Eben Ezar Restaurant</h4>
+        <div class="container bg_login py-5">
+            <div class="text-center">
+                <img src="../assets/logo-ebenezar_update.png" class="rounded mx-auto d-block" alt="Eben Azar Restaurant" />
             </div>
-            <div class="card-body">
-                <form>
-                    <div class="mb-3 mx-5">
-                        <div class="form-group col-md-12">
-                            <label class="form-label text-end">Email</label>
-                            <input class="form-control" type="email" v-model="email" placeholder="Username" required>
-                        </div>
+            <div class="col-md-4 mx-auto">
+                <div class="card border-warning text-bg-light m-5">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3 mx-5 mt-3">
+                                <div class="form-group col-md-12">
+                                    <label class="form-label text-end">Email</label>
+                                    <input class="form-control" type="email" v-model="email" placeholder="Username" required>
+                                </div>
+                            </div>
+                            <div class="mb-3 mx-5">
+                                <div class="form-group col-md-12">
+                                    <label class="form-label text-end">Password</label>
+                                    <input class="form-control" type="password" v-model="password" placeholder="password" required>
+                                </div>     
+                            </div>
+                            <div class="d-grid gap-2 col-12 mx-auto mb-4 mt-4 px-5">
+                                <button class="btn btn-warning btn-sm" type="button" @click="handleSubmit">Log in</button>
+                                <!-- <label class="text-center"><a href="#">forget password</a></label> -->
+                            </div>
+                        </form>
                     </div>
-                    <div class="mb-3 mx-5">
-                        <div class="form-group col-md-12">
-                            <label class="form-label text-end">Password</label>
-                            <input class="form-control" type="password" v-model="password" placeholder="password" required>
-                        </div>     
-                    </div>
-                    <div class="px-5 row mb-4">
-                        <div class="col-md-5">
-                            <button class=" btn btn-outline-primary btn-sm" type="button" :disabled="!email && !password" v-on:click="redirectMe">Log in</button> <!--logIn-->
-                        </div>
-                        <div class="col-md-7 text-end">
-                            <label><a href="#">forget password</a></label>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-        </div>
-
-    </div>
     </LayoutLogIn>
 </template>
 
 <script>
-import axios from "axios";
+import { registerRuntimeHelpers } from "@vue/compiler-core";
+//import "../axios";
+import axios from 'axios';
+
 import router from "../plugins/router";
 import LayoutLogIn from "./layouts/LogInLayout.vue";
 
@@ -52,39 +50,33 @@ export default {
         return {
             email: "",
             password: "",
+            error: ''
         }
+
     },
     methods: {
-        redirectMe() {
-            this.$router.push('/adminHome');
-        },
-        logIn() {
-                axios.post('http://app.mappiya.com/api/sanctum/token', {
+        handleSubmit() {
+            let $this = this;
+            const response = axios.post('http://app.mappiya.com/api/sanctum/token', {
                 email: this.email,
                 password: this.password,
-                device_name: 'Web_view',
-                this:$router.push('/adminHome')
-            })
-            .then(function (response) {
-                //console.log(response.data);
-                alert(response.data);
-                this.$router.push( '/adminHome');
-                    //.then(data => {
-                    //    this.$router.replace({ name: "Admin"});
-                    //})
-                        
-            })
-            .catch(function (error) {
-                //console.log(error);
-                //if(error.response.status === 422){
-                //    this.$router.push({name: "Settings"});
-                //}
+                device_name: 'Web_view'
+                }).then(function (res) {
+                //console.log(res.data);
+                window.localStorage.setItem('token', res.data);
+                $this.$router.push('/customer');
+                }).catch(function (error) {
+                console.log(error);
             });
         }
-
     }
 };
-
-
 </script>
+
+<style>
+.bg_login {
+    background-color: #d0a772;
+    height: 100vh;
+}
+</style>
 

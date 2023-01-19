@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Menu from "../views/Menu.vue";
-import ListGroupEmail from "../views/ListGroupEmail.vue";
 import LogIn from "../views/LogIn.vue";
-import AdminHome from "../views/AdminHome.vue";
+import Customer from "../views/Customer.vue";
+import Profile from "../views/Profile.vue";
 
 const routes = [
   {
@@ -19,24 +19,21 @@ const routes = [
   },
 
   {
-    path: "/listGroupEmail",
-    name: "email",
-    component: ListGroupEmail,
-  },
-
-  {
     path: "/login",
     name: "LogIn",
     component: LogIn,
   },
 
   {
-    path: "/adminHome",
-    name: "Admin",
-    component: AdminHome,
-    meta: {
-      needsAuth: false
-    }
+    path: "/customer",
+    name: "Customer",
+    component: Customer
+  },
+
+  {
+    path: "/profile",
+    name: "Profile",
+    component: Profile
   }
 
 ];
