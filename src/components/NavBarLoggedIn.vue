@@ -16,7 +16,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><router-link class="dropdown-item" :to="{name: 'Profile'}">Profile</router-link></li>
-                        <li><a class="dropdown-item">Log out</a></li>
+                        <li><router-link class="dropdown-item" :to="{name: 'home'}">Log out</router-link></li>
                     </ul>
                 </li>
             </ul>

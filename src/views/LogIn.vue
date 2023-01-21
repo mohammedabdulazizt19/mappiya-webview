@@ -1,10 +1,12 @@
 <template>
     <LayoutLogIn>
         <div class="container bg_login py-5">
-            <div class="text-center">
-                <img src="../assets/logo-ebenezar_update.png" class="rounded mx-auto d-block" alt="Eben Azar Restaurant" />
+            <div class="col-12 col-md-8 col-lg-4 mx-auto">
+                <div class="text-center">
+                    <img src="../assets/logo-ebenezar_update.png" class="img-fluid mx-auto" alt="Eben Azar Restaurant" />
+                </div>
             </div>
-            <div class="col-md-4 mx-auto">
+            <div class="col-12 col-md-8 col-lg-4 mx-auto">
                 <div class="card border-warning text-bg-light m-5">
                     <div class="card-body">
                         <form>
