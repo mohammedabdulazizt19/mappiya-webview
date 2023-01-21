@@ -2,7 +2,7 @@
     <CustomerLayout>
         <div class="container mt-5 pt-5 bg_Profile">
         <div class="row bg_Profile">
-            <div class="col-3 offset-2">
+            <div class="col-8 offset-2 col-md-8 offset-md-2 col-lg-3 offset-lg-2 mb-3">
                 <div class="card">
                     <div class="card-header">
                     </div>
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-5">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-5">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="mb-0">General Information</h4>
@@ -92,7 +92,7 @@
                         <a href="#" class="card-link">Update</a>
                     </div>
                 </div>
-                <div class="card mt-5">
+                <div class="card mt-3 mt-md-3 mt-lg-3">
                     <div class="card-header">
                         <h4 class="mb-0">Other Information</h4>
                     </div>

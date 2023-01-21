@@ -9,7 +9,7 @@
 
 </template>
 
-<script >
+<script>
 import LayoutCustomer from "./layouts/CustomerLayout.vue";
 //import { RouterLink } from 'vue-router'
 
