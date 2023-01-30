@@ -7,6 +7,7 @@ export default createStore({
   state: {
     menus: [],
     cart: cart ? JSON.parse(cart) : [],
+    deliveryFee: 12,
   },
 
   getters: {
@@ -16,6 +17,16 @@ export default createStore({
     },
 
     totalPrice: (state) => {
+      let total = 0;
+      state.cart.forEach((menu) => {
+        if (menu.price && menu.quantity) {
+          total += menu.price * menu.quantity;
+        }
+      });
+      return total + state.deliveryFee;
+    },
+
+    totalPriceWithoutDelivery: (state) => {
       let total = 0;
       state.cart.forEach((menu) => {
         if (menu.price && menu.quantity) {

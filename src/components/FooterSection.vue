@@ -68,9 +68,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                     <p class="company-name">
-                        All Rights Reserved.<a href="#">Eben Ezar Restaurant</a>
-                        Design By :
-                        <a href="">Yaramay</a>
+                        Powered  by: <a href="#">Hoopoelink</a>
                     </p>
                     </div>
                 </div>
