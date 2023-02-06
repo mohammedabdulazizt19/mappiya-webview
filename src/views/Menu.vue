@@ -1,89 +1,72 @@
 <template>
-    <GuestLayout>
-        <div>
-        <div class="">
-            <a class="btn cart-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-                <i class="fa-solid fa-cart-shopping fa-sm position-relative"></i>
-                <span style="top: 15%;" class="fs-6 position-absolute start-100 translate-middle badge rounded-pill text-bg-danger">
-                    15+
-                </span>
-            </a>
-        </div>
 
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Your cart</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div>
-                Start adding items to your cart
-            </div>
-            <hr />
-            <div class="row">
-                <div class="col-6">
-                    <p>Subtotal</p>
-                </div>
-                <div class="col-6">
-                    <p>₱ 0</p>
+    <!-- <GuestLayout> -->
+
+        <Cart />
+
+
+        <div>
+            <div class="container hero-container order-btn-wrapper">
+                <div class="row">
+                    <img class="img-fluid eben-banner" src="../assets/eben-banner.png" alt="">
+                    <router-link :to="{name: 'menu'}"><button class="menu-btn btn btn-success order-btn">Order Now</button></router-link> 
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-6">
-                    <h6>Total (Incl. VAT)</h6>
+            <div class="container menu-container">
+                <div class="container">
+                    <div class="row p-4 title-row">
+                        <div class="col-5">
+                            <h4>Eben Ezar Restaurant</h4>
+                            <div class="d-flex align-items-center">
+                                <i style="color: #FFF019;" class="fa-solid fa-star"></i>
+                                <p class="mt-3 mx-2">4.4/5 <span class="text-secondary">(100+)</span></p>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <ul class="resto-tag d-flex justify-content-between text-secondary">
+                                        <li>Japanese</li>
+                                        <li>Asian</li>
+                                        <li>Noodles</li>
+                                        <li>Rice Dishes</li>
+                                        <li>Southeast Asian</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>   
+                    </div> 
                 </div>
-                <div class="col-6">
-                    <p>₱ 0</p>
-                </div>
+
+
+                <AllMenu />
             </div>
-            <div class="row">
-                <button class="btn btn-secondary d-block w-100">Go to checkout</button>
-            </div>
-        </div>
-        </div>
-        <div class="container menu-container">
-            <div class="container">
-                <div class="row p-4 title-row">
-                    <div class="col-5">
-                        <h4>Eben Ezar Restaurant</h4>
-                        <div class="d-flex align-items-center">
-                            <i style="color: #FFF019;" class="fa-solid fa-star"></i>
-                            <p class="mt-3 mx-2">4.4/5 <span class="text-secondary">(100+)</span></p>
-                        </div>
-                    
-                        <ul class="d-flex justify-content-between text-secondary">
-                            <li>Japanese</li>
-                            <li>Asian</li>
-                            <li>Noodles</li>
-                            <li>Rice Dishes</li>
-                            <li>Southeast Asian</li>
-                        </ul>
-                    </div>   
-                </div> 
-            </div>
-            <MenuCategory />
-            <MenuTakoyaki />
-            <MenuRamen />
-            <MenuRiceBowl />
-        </div>
-    </div>  
-    </GuestLayout>
+        </div>  
+
+    <!-- </GuestLayout> -->
+
+    
+
+
 </template>
 
 
 <script>
-import MenuCategory from '../components/Menu/MenuCategory.vue';
-import MenuRamen from '../components/Menu/MenuRamen.vue';
-import MenuTakoyaki from '../components/Menu/MenuTakoyaki.vue';
-import MenuRiceBowl from '../components/Menu/MenuRiceBowl.vue';
-import GuestLayout from './layouts/GuestLayout.vue';
 
-export default{
+// import GuestLayout from './layouts/GuestLayout.vue';
+
+
+import Cart from '../components/Menu/Cart.vue'
+import AllMenu from '../components/Menu/AllMenu.vue';
+
+export default {
+    name: "Menu",
     components: {
-        GuestLayout
-    }
+        Cart,
+        AllMenu,
+        // GuestLayout,
+    },
 }
+
 </script>
  
 <style>
@@ -106,18 +89,45 @@ export default{
 .menu-image-wrapper{
     position: relative;
 }
-.menu-img{
+.menu-image-wrapper img{
     width: 100%;
     height: 100px;
     object-fit: cover;
 }
-.plus-icon{
-    color: red;
-    position: absolute;
-    top: 77%;
-    left: 76%;
-    cursor: pointer;
-}
+
+.hero-container img{
+        width: 100%;
+        object-fit: cover;
+        align-items: center;
+    }
+    .order-btn-wrapper{
+        position: relative;
+    }
+    .order-btn{
+        font-size: 1.2rem;
+        position: absolute;
+        top: 73%;
+        left: 46.5%;
+        padding: 10px 55px 10px 55px;
+    }
+
+    @media (max-width: 575.98px) { 
+        .menu-btn{
+            padding: 2px 7px 2px 7px;
+            font-size: 1rem;
+        }
+        .eben-banner{
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    @media (max-width: 767.98px) { 
+        .menu-btn{
+            padding: 5px 15px 5px 15px;
+            font-size: 1rem;
+        }
+     }
+
 
 
 </style>

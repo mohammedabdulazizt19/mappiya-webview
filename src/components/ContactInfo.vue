@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="contact-imfo-box">
+        <div class="contact-imfo-box mt-5">
             <div class="container">
                 <div class="row">
                 <div class="col-md-4">

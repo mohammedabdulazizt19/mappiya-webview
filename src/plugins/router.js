@@ -11,7 +11,6 @@ const routes = [
     name: "home",
     component: Home,
   },
-
   {
     path: "/menu",
     name: "menu",
@@ -27,15 +26,14 @@ const routes = [
   {
     path: "/customer",
     name: "Customer",
-    component: Customer
+    component: Customer,
   },
 
   {
     path: "/profile",
     name: "Profile",
-    component: Profile
-  }
-
+    component: Profile,
+  },
 ];
 
 const router = createRouter({
@@ -44,11 +42,11 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  if(to.meta.needsAuth) {
-    next('/login');
+  if (to.meta.needsAuth) {
+    next("/login");
   } else {
     next();
   }
-})
+});
 
 export default router;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <footer class="footer-area bg-f">
+        <footer class="footer-area bg-f" style="position: relative;">
             <div class="container">
                 <div class="row">
                 <div class="col-lg-3 col-md-6">
@@ -68,9 +68,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                     <p class="company-name">
-                        All Rights Reserved.<a href="#">Eben Ezar Restaurant</a>
-                        Design By :
-                        <a href="">Yaramay</a>
+                        Powered  by: <a href="#">Hoopoelink</a>
                     </p>
                     </div>
                 </div>

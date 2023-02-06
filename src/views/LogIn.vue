@@ -1,7 +1,7 @@
 <template>
     <LayoutLogIn>
-        <div class="container bg_login py-5">
-            <div class="col-12 col-md-8 col-lg-4 mx-auto">
+        <div class="container bg_login py-5 ">
+            <div class="col-12 col-md-8 col-lg-4 mx-auto ">
                 <div class="text-center">
                     <img src="../assets/logo-ebenezar_update.png" class="img-fluid mx-auto" alt="Eben Azar Restaurant" />
                 </div>
@@ -79,6 +79,7 @@ export default {
 .bg_login {
     background-color: #d0a772;
     height: 100vh;
+   
 }
 </style>
 
