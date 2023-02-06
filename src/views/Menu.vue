@@ -1,6 +1,51 @@
 <template>
+
     <div>
         <Cart />
+
+        <div>
+        <div class="">
+            <a class="btn cart-icon" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <i class="fa-solid fa-cart-shopping fa-sm position-relative"></i>
+                <span style="top: 15%;" class="fs-6 position-absolute start-100 translate-middle badge rounded-pill text-bg-danger">
+                    15+
+                </span>
+            </a>
+        </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Your cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Start adding items to your cart
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-6">
+                    <p>Subtotal</p>
+                </div>
+                <div class="col-6">
+                    <p>₱ 0</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6">
+                    <h6>Total (Incl. VAT)</h6>
+                </div>
+                <div class="col-6">
+                    <p>₱ 0</p>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn btn-secondary d-block w-100">Go to checkout</button>
+            </div>
+        </div>
+        </div>
+
         <div class="container menu-container">
             <div class="container">
                 <div class="row p-4 title-row">
@@ -30,19 +75,25 @@
             <AllMenu />
         </div>
     </div>  
+    
+    </div>
 </template>
 
 
 <script>
+
 import Cart from '../components/Menu/Cart.vue'
 import AllMenu from '../components/Menu/AllMenu.vue';
+
 export default {
     name: "Menu",
     components: {
         Cart,
-        AllMenu
+        AllMenu,
+        
     },
 }
+
 
 </script>
  

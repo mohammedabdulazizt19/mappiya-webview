@@ -36,7 +36,7 @@
             <hr />
             <div class="row px-2 row-textsize">
                 <div class="col-6">
-                    <p>Total (Incl. VAT)</p>
+                    <p>Subtotal</p>
                     <p>Delivery Fee</p>
                 </div>
                 <div class="col-6 text-center">
